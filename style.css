@@ -18,6 +18,7 @@
   --accent-ink: #FFF8EE;
   --selection: #F9E3C0;
   --tray: #C9B48F;
+  --tray-ink: #3B2E1A;
   --outline: #FFF8EE;        /* the sticker's white outline */
   --navy: #1F2A3A;           /* app-icon background */
   --graticule: rgba(31, 42, 58, 0.07);
@@ -40,6 +41,7 @@
     --accent-ink: #1B1110;
     --selection: #4A3A26;
     --tray: #3A3226;
+    --tray-ink: #EFE0C2;
     --outline: #EFE7D6;
     --navy: #10141B;
     --graticule: rgba(239, 231, 214, 0.05);
@@ -165,7 +167,7 @@ h1, h2, h3, .display { font-family: var(--display); font-weight: 400; letter-spa
 }
 .chip-sticker.a { top: 8%; right: 4%; --r: 8deg; background: var(--selection); }
 .chip-sticker.b { bottom: 10%; left: 0; --r: -7deg; background: var(--accent); color: var(--accent-ink); }
-.chip-sticker.c { bottom: 2%; right: 12%; --r: 4deg; background: var(--tray); color: #3B2E1A; }
+.chip-sticker.c { bottom: 2%; right: 12%; --r: 4deg; background: var(--tray); color: var(--tray-ink); }
 
 @media (prefers-reduced-motion: no-preference) {
   .float { animation: float 6s ease-in-out infinite; }
@@ -194,7 +196,7 @@ section { padding: 32px 0; }
   border-radius: 6px; border-width: 0;
   background: var(--surface);
 }
-.polaroid h3 { font-size: 26px; margin: 4px 0 8px; }
+.polaroid h3 { font-size: 26px; line-height: 1.2; margin: 8px 0 10px; }
 .polaroid .mail { font-family: var(--display); font-size: clamp(22px, 4.6vw, 30px); color: var(--accent); text-decoration: none; overflow-wrap: anywhere; }
 .polaroid .mail:hover { text-decoration: underline; }
 .checklist { list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
