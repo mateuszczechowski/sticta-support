@@ -5,47 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sticta Support</title>
   <meta name="description" content="Help and contact for Sticta, the Mac app that turns your photos into sticker wallpapers.">
+  <meta name="theme-color" content="#D9D3C4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17191D" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="preload" href="assets/YoungSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <nav>
-    <span class="brand">Sticta</span>
-    <a href="./" aria-current="page">Support</a>
-    <a href="privacy.html">Privacy</a>
+
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="Main">
+    <a class="brand" href="./"><img src="assets/icon.png" alt=""><span>Sticta</span></a>
+    <a class="pill" href="./" aria-current="page">Support</a>
+    <a class="pill" href="privacy.html">Privacy</a>
   </nav>
+</header>
 
-  <h1>Support</h1>
-  <p class="meta">Help for Sticta on macOS</p>
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow reveal">Sticta for Mac · Support</span>
+          <h1 class="reveal d1">Stuck? We'll help you <em>stick</em> it.</h1>
+          <p class="lede reveal d2">Sticta turns your photos into stickers, lets you pin them to a travel map, a fridge door or a free-form background, and sets the result as your desktop. If something doesn't work, we're here to help.</p>
+          <div class="actions reveal d3">
+            <a class="btn" href="mailto:sticta@proton.me">Email support</a>
+            <a class="btn ghost" href="#faq">Browse answers</a>
+          </div>
+        </div>
 
-  <p>Sticta turns your own photos into stickers, lets you arrange them on a scene (a travel map, a fridge door or a free-form background) and sets the result as your desktop wallpaper.</p>
+        <div class="hero-art" aria-hidden="true">
+          <svg class="route" viewBox="0 0 400 360" preserveAspectRatio="none">
+            <path d="M20 300 C 80 240, 60 150, 140 120 S 260 60, 300 110 S 390 220, 370 330"/>
+            <circle class="halo" cx="20" cy="300" r="11"/><circle cx="20" cy="300" r="5"/>
+            <circle class="halo" cx="300" cy="110" r="11"/><circle cx="300" cy="110" r="5"/>
+            <circle class="halo" cx="370" cy="330" r="11"/><circle cx="370" cy="330" r="5"/>
+          </svg>
+          <div class="sticker icon-sticker float"><img src="assets/icon.png" alt=""></div>
+          <div class="sticker chip-sticker a float d2">Lisbon</div>
+          <div class="sticker chip-sticker b float d3">Kyoto</div>
+          <div class="sticker chip-sticker c float">Reykjavík</div>
+        </div>
+      </div>
+    </section>
 
-  <div class="card">
-    <p><strong>Need help?</strong> Write to <a href="mailto:sticta@proton.me">sticta@proton.me</a>. We read every message and usually reply within a few working days.</p>
-    <p>Please include your macOS version, your Mac model, the Sticta version (Sticta → About Sticta) and, if you can, a screenshot of the problem.</p>
+    <section id="contact">
+      <div class="sticker polaroid">
+        <span class="pin"></span>
+        <span class="eyebrow">Write to us</span>
+        <h3>A real person reads every message.</h3>
+        <a class="mail" href="mailto:sticta@proton.me">sticta@proton.me</a>
+        <p style="color:var(--mute);margin:10px 0 0">We usually reply within a few working days. To help us help you faster, please include:</p>
+        <ul class="checklist">
+          <li>Your macOS version</li>
+          <li>Your Mac model</li>
+          <li>Sticta version (Sticta → About)</li>
+          <li>A screenshot, if you can</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="section-head">
+        <h2>Pinned answers</h2>
+        <span class="count">06</span>
+      </div>
+
+      <div class="faq">
+        <details class="sticker">
+          <summary><span class="dot">+</span>My wallpaper didn't change after I edited a project.</summary>
+          <div class="answer"><p>Sticta never changes your wallpaper on its own. When you're happy with your edits, click the button that sets the project as your wallpaper. The same goes for connecting or disconnecting a display: the button shows the wallpaper is out of date and waits for you.</p></div>
+        </details>
+
+        <details class="sticker">
+          <summary><span class="dot">+</span>Can I use a different project on each display?</summary>
+          <div class="answer"><p>Yes. Open Displays in Sticta and assign a project to each connected screen. Sticta remembers the assignment.</p></div>
+        </details>
+
+        <details class="sticker">
+          <summary><span class="dot">+</span>Why wasn't my photo placed on the map automatically?</summary>
+          <div class="answer"><p>Automatic placement uses the location saved in the photo (GPS data). If a photo has no location data, or it has been removed, you can still drag its sticker onto the right country yourself.</p></div>
+        </details>
+
+        <details class="sticker">
+          <summary><span class="dot">+</span>Sticta is using a lot of disk space.</summary>
+          <div class="answer"><p>Each sticker keeps its original photo so you can edit it later. Open Settings → Storage to see how much space Sticta uses and to clean up files nothing uses anymore. You can also delete stickers you no longer need from the sticker bank.</p></div>
+        </details>
+
+        <details class="sticker">
+          <summary><span class="dot">+</span>Does Sticta upload my photos anywhere?</summary>
+          <div class="answer"><p>No. Sticta runs entirely on your Mac and never connects to the internet. Read the <a href="privacy.html">privacy policy</a> for the details.</p></div>
+        </details>
+
+        <details class="sticker">
+          <summary><span class="dot">+</span>How do I hide the menu bar icon?</summary>
+          <div class="answer"><p>Open Settings → General and turn off the menu bar icon. You can turn it back on at any time.</p></div>
+        </details>
+      </div>
+    </section>
   </div>
-
-  <h2>Frequently asked questions</h2>
-
-  <h3>My wallpaper didn't change after I edited a project.</h3>
-  <p>Sticta never changes your wallpaper on its own. After editing, click the button that applies the project to your desktop. The same applies when you connect or disconnect a display: the button shows that the wallpaper is out of date and waits for you.</p>
-
-  <h3>Can I use a different project on each display?</h3>
-  <p>Yes. Open Displays in Sticta and assign a project to each connected screen. The assignment is remembered.</p>
-
-  <h3>Why wasn't my photo placed on the map automatically?</h3>
-  <p>Automatic placement uses the location saved in the photo (GPS data). Photos without location data, or with the location removed, can still be placed by hand by dragging the sticker onto the right country.</p>
-
-  <h3>Sticta is taking up a lot of disk space.</h3>
-  <p>Each sticker keeps its source photo so you can edit it later. Open Settings → Storage to see how much space Sticta uses and to clean up files that are no longer needed. You can also delete stickers you no longer use from the sticker bank.</p>
-
-  <h3>Does Sticta upload my photos anywhere?</h3>
-  <p>No. Sticta works entirely on your Mac and doesn't connect to the internet. See the <a href="privacy.html">privacy policy</a> for details.</p>
-
-  <h3>How do I get rid of the menu bar icon?</h3>
-  <p>Open Settings → General and turn off the menu bar icon.</p>
-
-  <footer>© 2026 Mateusz Czechowski · <a href="mailto:sticta@proton.me">sticta@proton.me</a></footer>
 </main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="display">Sticta</span>
+    <span>© 2026 Mateusz Czechowski · <a href="mailto:sticta@proton.me">sticta@proton.me</a> · <a href="privacy.html">Privacy</a></span>
+  </div>
+</footer>
+
 </body>
 </html>

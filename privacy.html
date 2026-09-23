@@ -4,55 +4,102 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sticta Privacy Policy</title>
-  <meta name="description" content="Sticta does not collect, store or share any personal data. Everything stays on your Mac.">
+  <meta name="description" content="Sticta doesn't collect, store or share any personal data. Everything stays on your Mac.">
+  <meta name="theme-color" content="#D9D3C4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17191D" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="preload" href="assets/YoungSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <nav>
-    <span class="brand">Sticta</span>
-    <a href="./">Support</a>
-    <a href="privacy.html" aria-current="page">Privacy</a>
+
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="Main">
+    <a class="brand" href="./"><img src="assets/icon.png" alt=""><span>Sticta</span></a>
+    <a class="pill" href="./">Support</a>
+    <a class="pill" href="privacy.html" aria-current="page">Privacy</a>
   </nav>
+</header>
 
-  <h1>Privacy Policy</h1>
-  <p class="meta">Effective 23 September 2026</p>
+<main>
+  <div class="wrap">
+    <section class="hero" style="padding-bottom:24px">
+      <span class="eyebrow reveal">Sticta for Mac · Privacy</span>
+      <h1 class="reveal d1">Your memories stay <em>on your Mac.</em></h1>
+      <p class="lede reveal d2">Sticta doesn't collect anything. No account, no cloud, no analytics. The photos you turn into stickers never leave your computer.</p>
 
-  <div class="card">
-    <p><strong>In short:</strong> Sticta does not collect any data. Your photos, stickers and projects stay on your Mac. The app doesn't connect to the internet, has no accounts, no analytics, no advertising and no tracking.</p>
+      <div class="promises reveal d3">
+        <div class="sticker promise"><div class="big">0</div><div class="label">bytes collected</div><div class="sub">No personal data, usage data or diagnostics.</div></div>
+        <div class="sticker promise"><div class="big">0</div><div class="label">network requests</div><div class="sub">Sticta works fully offline.</div></div>
+        <div class="sticker promise"><div class="big">0</div><div class="label">accounts</div><div class="sub">Nothing to sign up for or sign in to.</div></div>
+        <div class="sticker promise"><div class="big">0</div><div class="label">trackers</div><div class="sub">No ads, no analytics, no third-party SDKs.</div></div>
+      </div>
+    </section>
+
+    <article class="sheet">
+      <span class="tape l"></span><span class="tape r"></span>
+      <p class="meta">Effective 23 September 2026</p>
+      <h2>Privacy Policy</h2>
+
+      <p class="tldr"><strong>In short:</strong> Sticta doesn't collect any data. Your photos, stickers and projects stay on your Mac.</p>
+      <p>This policy explains how Sticta for macOS (“Sticta”, “the app”) handles your information. Sticta is made by Mateusz Czechowski (“we”, “us”).</p>
+
+      <div class="clause"><span class="n">01</span><div>
+        <h3>Data we collect</h3>
+        <p>None. We don't collect, receive, store or share any personal data, usage data, diagnostics or identifiers. We don't run any servers that the app talks to.</p>
+      </div></div>
+
+      <div class="clause"><span class="n">02</span><div>
+        <h3>Your photos</h3>
+        <p>Sticta has no access to your Photos library. You choose each photo yourself, using the standard macOS file picker or by dragging it into the app. Sticta only sees the photos you give it.</p>
+        <p>To make stickers, Sticta keeps a resized copy of each photo you choose, together with the cut-out you create. To place stickers on the travel map, Sticta reads the location (GPS coordinates) stored in the photo and works out the country on your Mac, using map data built into the app. Location data never leaves your Mac.</p>
+      </div></div>
+
+      <div class="clause"><span class="n">03</span><div>
+        <h3>Where your data is stored</h3>
+        <p>Projects, stickers and the wallpaper images Sticta creates are stored in Sticta's own folder on your Mac. They are never sent to us or anyone else. If you back up your Mac with iCloud or Time Machine, Apple handles those copies under its own terms, not us.</p>
+      </div></div>
+
+      <div class="clause"><span class="n">04</span><div>
+        <h3>Deleting your data</h3>
+        <p>You can delete stickers and projects in the app at any time. Deleting Sticta from your Mac removes the app and its data folder. We never have a copy of your data, so there's nothing for us to delete.</p>
+      </div></div>
+
+      <div class="clause"><span class="n">05</span><div>
+        <h3>Purchases</h3>
+        <p>Sticta is sold through the Mac App Store, and Apple processes all purchases. We never receive your name, payment details or Apple Account. <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a> explains how Apple handles this information.</p>
+      </div></div>
+
+      <div class="clause"><span class="n">06</span><div>
+        <h3>Children</h3>
+        <p>Sticta doesn't collect data from anyone, including children under 13 (or the minimum age in your country).</p>
+      </div></div>
+
+      <div class="clause"><span class="n">07</span><div>
+        <h3>Your rights</h3>
+        <p>Under the GDPR and similar laws, you have the right to access, correct or delete personal data held about you. We don't hold any personal data about you, so there's nothing to access or delete. If you email us, we use your email address and message only to reply, and we delete the conversation once it's no longer needed.</p>
+      </div></div>
+
+      <div class="clause"><span class="n">08</span><div>
+        <h3>Changes to this policy</h3>
+        <p>If Sticta ever changes how it handles data, we'll update this page and the date at the top before the change takes effect.</p>
+      </div></div>
+
+      <div class="clause"><span class="n">09</span><div>
+        <h3>Contact</h3>
+        <p>Questions about privacy? Write to <a href="mailto:sticta@proton.me">sticta@proton.me</a>.</p>
+      </div></div>
+    </article>
   </div>
-
-  <p>This policy explains how Sticta for macOS (“Sticta”, “the app”) handles your information. Sticta is developed by Mateusz Czechowski (“we”, “us”).</p>
-
-  <h2>Data we collect</h2>
-  <p>None. We don't collect, receive, store or share any personal data, usage data, diagnostics or identifiers. We have no servers that the app talks to.</p>
-
-  <h2>Your photos</h2>
-  <p>Sticta has no access to your Photos library. You choose each photo yourself, using the standard macOS file picker or by dragging it into the app. Sticta only sees the photos you give it.</p>
-  <p>To make stickers, Sticta keeps a resized copy of each chosen photo together with the cut-out mask you create. To place stickers on the travel map, Sticta reads the location (GPS coordinates) stored in the photo and works out the country entirely on your Mac, using map data built into the app. Location data never leaves your device.</p>
-
-  <h2>Where your data is stored</h2>
-  <p>Projects, stickers and generated wallpaper images are stored locally in Sticta's own folder on your Mac. They aren't sent to us or to anyone else. If you use iCloud or Time Machine to back up your Mac, those copies are handled by Apple under Apple's terms, not by us.</p>
-
-  <h2>Deleting your data</h2>
-  <p>You can delete individual stickers and projects inside the app at any time. Deleting Sticta from your Mac removes the app and its data folder. Because we never hold a copy of your data, there's nothing for us to delete on our side.</p>
-
-  <h2>Purchases</h2>
-  <p>Sticta is distributed through the Mac App Store. Any purchase is processed by Apple. We don't receive your name, payment details or Apple ID. Apple's handling of this information is described in <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
-
-  <h2>Children</h2>
-  <p>Sticta doesn't collect data from anyone, including children under 13 (or the equivalent minimum age in your country).</p>
-
-  <h2>Your rights</h2>
-  <p>Under the GDPR and similar laws you have the right to access, correct or delete personal data held about you. Since we don't hold any personal data, there is nothing to access or delete. If you email us, we use your email address and message only to reply to you, and we delete the conversation when it's no longer needed.</p>
-
-  <h2>Changes to this policy</h2>
-  <p>If Sticta ever changes how it handles data, we'll update this page and the date at the top before the change takes effect.</p>
-
-  <h2>Contact</h2>
-  <p>Questions about privacy: <a href="mailto:sticta@proton.me">sticta@proton.me</a>.</p>
-
-  <footer>© 2026 Mateusz Czechowski · <a href="mailto:sticta@proton.me">sticta@proton.me</a></footer>
 </main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="display">Sticta</span>
+    <span>© 2026 Mateusz Czechowski · <a href="mailto:sticta@proton.me">sticta@proton.me</a> · <a href="./">Support</a></span>
+  </div>
+</footer>
+
 </body>
 </html>
