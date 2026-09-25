@@ -95,6 +95,9 @@ h1, h2, h3, .display { font-family: var(--display); font-weight: 400; letter-spa
 }
 .pill:hover { background: var(--chip); }
 .pill[aria-current="page"] { background: var(--accent); color: var(--accent-ink); }
+.pill.cta { background: var(--ink); color: var(--surface); white-space: nowrap; }
+.pill.cta:hover { background: var(--accent); color: var(--accent-ink); }
+@media (max-width: 700px) { .hide-sm { display: none; } }
 
 /* ---------- hero ---------- */
 .hero { position: relative; padding: 72px 0 56px; }
