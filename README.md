@@ -13,3 +13,5 @@ Sticker images in `assets/home/` were cut by Sticta's own pipeline from CC0 samp
 Served by GitHub Pages under the custom domain in `CNAME`; the domain is registered at Cloudflare, with DNS there set to "DNS only".
 
 Contact: sticta@proton.me
+
+After editing `style.css`, `home.css` or `home.js`, run `python3 tools/stamp.py`: it stamps their links in every page with a content hash, so browsers never pair a new page with a cached old stylesheet.
