@@ -3,117 +3,329 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sticta Support</title>
-  <meta name="description" content="Help and contact for Sticta, the Mac app that turns your photos into sticker wallpapers.">
+  <title>Sticta — your photos, stuck to your desktop</title>
+  <meta name="description" content="Sticta cuts people out of your photos, turns them into stickers and pins them to a travel map, a fridge door or a corkboard — then sets it all as your Mac's wallpaper.">
+  <meta property="og:title" content="Sticta — your photos, stuck to your desktop">
+  <meta property="og:description" content="Turn your photos into stickers and your stickers into a wallpaper. Coming soon to the Mac App Store.">
+  <meta property="og:image" content="https://sticta.app/assets/icon.png">
   <meta name="theme-color" content="#D9D3C4" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#17191D" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="preload" href="assets/YoungSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="home">
 
 <header class="topbar">
   <nav class="topbar-inner" aria-label="Main">
     <a class="brand" href="./"><img src="assets/icon.png" alt=""><span>Sticta</span></a>
-    <a class="pill" href="./" aria-current="page">Support</a>
-    <a class="pill" href="privacy.html">Privacy</a>
+    <a class="pill hide-sm" href="#features">Features</a>
+    <a class="pill hide-sm" href="#pricing">Pricing</a>
+    <a class="pill hide-sm" href="support">Support</a>
+    <a class="pill cta" href="#notify">Get notified</a>
   </nav>
 </header>
 
 <main>
-  <div class="wrap">
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <span class="eyebrow reveal">Sticta for Mac · Support</span>
-          <h1 class="reveal d1">Stuck? We'll help you <em>stick</em> it.</h1>
-          <p class="lede reveal d2">Sticta turns your photos into stickers, lets you pin them to a travel map, a fridge door or a free-form background, and sets the result as your desktop. If something doesn't work, we're here to help.</p>
-          <div class="actions reveal d3">
-            <a class="btn" href="mailto:sticta@proton.me">Email support</a>
-            <a class="btn ghost" href="#faq">Browse answers</a>
+  <!-- ============ HERO ============ -->
+  <section class="hero-home">
+    <div class="wrap narrow">
+      <span class="eyebrow reveal">Coming soon to the Mac App Store</span>
+      <h1 class="reveal d1">Your photos, <em>stuck</em> to your desktop.</h1>
+      <p class="lede reveal d2">Sticta cuts the people out of your photos, turns them into stickers and pins them to a travel map, a fridge door or a corkboard. Then it sets the whole thing as your wallpaper.</p>
+      <form class="notify reveal d3" data-notify novalidate>
+        <label class="sr-only" for="email-top">Email address</label>
+        <input id="email-top" type="email" name="field_0" placeholder="you@example.com" autocomplete="email" required>
+        <button class="btn" type="submit">Tell me when it's out</button>
+        <input class="hp" type="text" name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="notify-note">One email on launch day. Nothing else, ever.</p>
+      </form>
+    </div>
+
+    <div class="wrap wide">
+      <div class="mac reveal d3" id="demo">
+        <div class="mac-screen" data-mode="edit">
+          <div class="wall">
+            <div class="map-live" aria-hidden="true"></div>
+            <div class="sticker-layer">
+              <figure class="st" data-name="lena" style="--x:7.4;--y:12;--w:16;--r:-5deg"><span class="tack"></span><img src="assets/home/lena.webp" alt="Sticker of a woman with red hair" draggable="false"></figure>
+              <figure class="st" data-name="duo" style="--x:26.5;--y:42;--w:9;--r:4deg"><span class="tack"></span><img src="assets/home/duo.webp" alt="Sticker of two friends looking at a camera" draggable="false"></figure>
+              <figure class="st" data-name="cam" style="--x:55.1;--y:44;--w:7;--r:-3deg"><span class="tack"></span><img src="assets/home/cam.webp" alt="Sticker of a photographer with a backpack" draggable="false"></figure>
+              <figure class="st" data-name="maya" style="--x:43.5;--y:63.5;--w:10;--r:6deg"><span class="tack"></span><img src="assets/home/maya.webp" alt="Sticker of a woman with long hair" draggable="false"></figure>
+            </div>
           </div>
-        </div>
 
-        <div class="hero-art" aria-hidden="true">
-          <svg class="route" viewBox="0 0 400 360" preserveAspectRatio="none">
-            <path d="M20 300 C 80 240, 60 150, 140 120 S 260 60, 300 110 S 390 220, 370 330"/>
-            <circle class="halo" cx="20" cy="300" r="11"/><circle cx="20" cy="300" r="5"/>
-            <circle class="halo" cx="300" cy="110" r="11"/><circle cx="300" cy="110" r="5"/>
-            <circle class="halo" cx="370" cy="330" r="11"/><circle cx="370" cy="330" r="5"/>
-          </svg>
-          <div class="sticker icon-sticker float"><img src="assets/icon.png" alt=""></div>
-          <div class="sticker chip-sticker a float d2">Lisbon</div>
-          <div class="sticker chip-sticker b float d3">Kyoto</div>
-          <div class="sticker chip-sticker c float">Reykjavík</div>
+          <!-- the app's floating chrome (edit mode) -->
+          <div class="chrome">
+            <div class="cap left"><span class="glyph"></span><strong>Summer trips</strong><span class="sep"></span><span>Europe</span></div>
+            <div class="cap mid"><span class="count-dot"></span><span data-count>4</span>&nbsp;countries</div>
+            <button class="cap-btn" type="button" data-apply>Set as Wallpaper</button>
+          </div>
+          <div class="hint" aria-hidden="true">
+            <svg viewBox="0 0 60 40"><path d="M4 34 C 18 30, 30 20, 50 8" /><path d="M40 7 L51 7 L47 18"/></svg>
+            <span>Go on, drag one to another country</span>
+          </div>
+
+          <!-- desktop mode: menu bar + dock -->
+          <div class="menubar" aria-hidden="true">
+            <span class="mb-app">Finder</span><span>File</span><span>Edit</span><span>View</span><span>Go</span>
+            <span class="mb-right"><i class="mb-glyph"></i><span class="clock">Fri 9:41</span></span>
+          </div>
+          <div class="dock" aria-hidden="true"><i></i><i></i><i class="sticta"></i><i></i><i></i></div>
+          <div class="toast" aria-live="polite">Wallpaper set on this display</div>
+          <button class="back-btn" type="button" data-edit>Back to editing</button>
         </div>
+        <div class="mac-chin"></div>
       </div>
-    </section>
+    </div>
+    <p class="small-print wrap">For Macs with Apple silicon · macOS 14 or later</p>
+  </section>
 
-    <section id="contact">
-      <div class="sticker polaroid">
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="features" class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps, zero scissors.</h2>
+    </div>
+    <ol class="steps">
+      <li class="sticker step" style="--r:-2deg">
+        <span class="step-n">1</span>
+        <h3>Drop your photos</h3>
+        <p>Drag them in from Photos or Finder. Holiday snaps with a location go straight to the right country.</p>
+      </li>
+      <li class="sticker step" style="--r:1.5deg">
+        <span class="step-n">2</span>
+        <h3>Keep who matters</h3>
+        <p>Sticta finds the people and cuts them out. Five friends in one shot? Pick who makes the sticker.</p>
+      </li>
+      <li class="sticker step" style="--r:-1deg">
+        <span class="step-n">3</span>
+        <h3>Set as wallpaper</h3>
+        <p>One click and it's your real desktop, rendered sharp for every screen you have.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ CUTOUT ============ -->
+  <section class="wrap split">
+    <div class="split-copy">
+      <span class="eyebrow">Cutout</span>
+      <h2>From photo to sticker in a blink.</h2>
+      <p>Sticta picks out the subject in about a third of a second, right on your Mac. Flyaway hair, busy backgrounds, a crowd of four: it handles them.</p>
+      <p>And when it misses a bit, you're not stuck with it. A brush erases or brings back whole chunks, not just a pixel at the edge.</p>
+      <ul class="ticks">
+        <li>Choose one person or the whole group</li>
+        <li>Brush to erase or restore</li>
+        <li>Nothing is uploaded, ever</li>
+      </ul>
+    </div>
+    <div class="before-after sticker" style="--r:1.5deg" data-compare>
+      <img class="ba-photo" src="assets/home/lena-photo.webp" alt="The original photo" draggable="false">
+      <div class="ba-cut"><img src="assets/home/lena-cut.webp" alt="The same photo cut out as a sticker" draggable="false"></div>
+      <div class="ba-handle"><span></span></div>
+      <input type="range" min="0" max="100" value="55" aria-label="Compare photo and sticker">
+      <span class="ba-tag l">Photo</span><span class="ba-tag r">Sticker</span>
+    </div>
+  </section>
+
+  <!-- ============ STYLE LAB ============ -->
+  <section class="wrap split reverse">
+    <div class="split-copy">
+      <span class="eyebrow">Style</span>
+      <h2>Make it look stuck on.</h2>
+      <p>A thick white edge, a soft shadow, a polaroid frame. The outline isn't only for looks: it hides the ragged edges any cutout leaves behind.</p>
+      <div class="lab" data-lab>
+        <div class="seg" role="radiogroup" aria-label="Sticker type">
+          <button type="button" role="radio" aria-checked="true" data-kind="sticker">Sticker</button>
+          <button type="button" role="radio" aria-checked="false" data-kind="polaroid">Polaroid</button>
+        </div>
+        <label class="row">Outline <input type="range" min="0" max="14" value="8" data-outline></label>
+        <label class="row switch">Shadow <input type="checkbox" checked data-shadow><span></span></label>
+        <label class="row switch">Flip <input type="checkbox" data-flip><span></span></label>
+      </div>
+    </div>
+    <div class="lab-stage">
+      <div class="lab-sticker" data-kind="sticker">
+        <img class="as-sticker" src="assets/home/maya-bare.webp" alt="Sticker preview" draggable="false">
+        <div class="as-polaroid"><img src="assets/home/maya-photo.webp" alt="Polaroid preview" draggable="false"></div>
+      </div>
+    </div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <filter id="outline" x="-20%" y="-20%" width="140%" height="140%">
+        <feMorphology in="SourceAlpha" operator="dilate" radius="8" result="grow" data-radius/>
+        <feGaussianBlur in="grow" stdDeviation=".6" result="soft"/>
+        <feFlood flood-color="#FFFAF2"/>
+        <feComposite in2="soft" operator="in" result="edge"/>
+        <feMerge><feMergeNode in="edge"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </svg>
+  </section>
+
+  <!-- ============ MAP ============ -->
+  <section class="wrap">
+    <div class="map-feature">
+      <img class="mf-map" src="assets/home/europe-static.svg" alt="" loading="lazy">
+      <div class="mf-card sticker" style="--r:-1.5deg">
         <span class="pin"></span>
-        <span class="eyebrow">Write to us</span>
-        <h3>A real person reads every message.</h3>
-        <a class="mail" href="mailto:sticta@proton.me">sticta@proton.me</a>
-        <p style="color:var(--mute);margin:10px 0 0">We usually reply within a few working days. To help us help you faster, please include:</p>
-        <ul class="checklist">
-          <li>Your macOS version</li>
-          <li>Your Mac model</li>
-          <li>Sticta version (Sticta → About)</li>
-          <li>A screenshot, if you can</li>
+        <span class="eyebrow">The travel map</span>
+        <h2>Every sticker lands where it happened.</h2>
+        <p>Sticta reads the location saved in your photos and pins each sticker to its country. The countries you've been to light up, and the counter keeps score.</p>
+        <div class="facts">
+          <div><strong>Offline</strong><span>Borders are built in. No map service sees where you've been.</span></div>
+          <div><strong>Zoom</strong><span>Show the whole world, a continent or one country.</span></div>
+          <div><strong>Big faces</strong><span>Stickers are sized so you can still tell who's who.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENES ============ -->
+  <section class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Scenes</span>
+      <h2>Pick a wall to stick them on.</h2>
+    </div>
+    <div class="scenes">
+      <figure class="scene sticker" style="--r:-1.5deg">
+        <span class="tape l"></span>
+        <div class="shot">
+          <img src="assets/home/europe-static.svg" alt="Travel map scene" loading="lazy">
+          <img class="mini" style="left:9%;top:6%;width:17%" src="assets/home/lena.webp" alt="" loading="lazy">
+          <img class="mini" style="left:30%;top:28%;width:18%" src="assets/home/crew.webp" alt="" loading="lazy">
+          <img class="mini" style="left:47%;top:60%;width:10%" src="assets/home/maya.webp" alt="" loading="lazy">
+        </div>
+        <figcaption><strong>Travel map</strong> Countries light up as you go.</figcaption>
+      </figure>
+      <figure class="scene sticker" style="--r:1deg" data-variants>
+        <span class="tape r"></span>
+        <div class="shot"><img src="assets/home/scene-fridge-white.webp" alt="Fridge door scene with magnets" loading="lazy"></div>
+        <figcaption><strong>Fridge door</strong> Magnets included.
+          <span class="swatches">
+            <button type="button" aria-label="White fridge" aria-pressed="true" style="--c:#E9E8E4" data-src="assets/home/scene-fridge-white.webp"></button>
+            <button type="button" aria-label="Black fridge" aria-pressed="false" style="--c:#2B2C2F" data-src="assets/home/scene-fridge-black.webp"></button>
+          </span>
+        </figcaption>
+      </figure>
+      <figure class="scene sticker" style="--r:-.8deg" data-variants>
+        <span class="tape l"></span>
+        <div class="shot"><img src="assets/home/scene-corkboard-default.webp" alt="Corkboard scene with pushpins" loading="lazy"></div>
+        <figcaption><strong>Corkboard</strong> Pushpins, of course.
+          <span class="swatches">
+            <button type="button" aria-label="Wooden frame" aria-pressed="true" style="--c:#6B4426" data-src="assets/home/scene-corkboard-default.webp"></button>
+            <button type="button" aria-label="Blue frame" aria-pressed="false" style="--c:#2F4F7A" data-src="assets/home/scene-corkboard-blue-frame.webp"></button>
+          </span>
+        </figcaption>
+      </figure>
+      <figure class="scene sticker free" style="--r:1.6deg">
+        <span class="tape r"></span>
+        <div class="shot free-bg">
+          <img class="mini" style="left:16%;top:12%;width:15%" src="assets/home/duo.webp" alt="" loading="lazy">
+          <img class="mini" style="left:52%;top:10%;width:18%" src="assets/home/maya.webp" alt="" loading="lazy">
+        </div>
+        <figcaption><strong>Anything goes</strong> Your own photo or a color behind.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ DISPLAYS ============ -->
+  <section class="wrap split">
+    <div class="split-copy">
+      <span class="eyebrow">Displays <span class="badge">Unlimited</span></span>
+      <h2>A different story on every screen.</h2>
+      <p>Give each display its own project. Sticta remembers which is which, even after you unplug and plug back in.</p>
+      <p>Can't pick a favourite? Add a few projects to a screen and Sticta rotates them every hour, every day, every week or each time your Mac wakes up.</p>
+      <div class="chips"><span>Hourly</span><span class="on">Daily</span><span>Weekly</span><span>On wake</span><span>Shuffle</span></div>
+    </div>
+    <div class="displays" aria-hidden="true">
+      <div class="monitor big"><div class="panel"><img src="assets/home/europe-static.svg" alt=""><img class="mini" style="left:10%;top:7%;width:17%" src="assets/home/lena.webp" alt=""><img class="mini" style="left:30%;top:29%;width:18%" src="assets/home/crew.webp" alt=""></div><div class="stand"></div></div>
+      <div class="monitor small"><div class="panel rotate">
+        <img src="assets/home/scene-corkboard-default.webp" alt="" loading="lazy">
+        <img src="assets/home/scene-fridge-white.webp" alt="" loading="lazy">
+        <img src="assets/home/scene-corkboard-blue-frame.webp" alt="" loading="lazy">
+      </div><div class="stand"></div></div>
+    </div>
+  </section>
+
+  <!-- ============ PRIVACY ============ -->
+  <section class="wrap">
+    <div class="private">
+      <div>
+        <span class="eyebrow light">Privacy</span>
+        <h2>Your photos never leave your Mac.</h2>
+        <p>Sticta doesn't connect to the internet. It only sees the photos you hand it, through the system picker or a drag and drop. No account, no cloud, no analytics.</p>
+        <a class="link-light" href="privacy">Read the privacy policy →</a>
+      </div>
+      <ul class="zeros">
+        <li><strong>0</strong><span>servers</span></li>
+        <li><strong>0</strong><span>accounts</span></li>
+        <li><strong>0</strong><span>trackers</span></li>
+        <li><strong>0</strong><span>bytes uploaded</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Pricing</span>
+      <h2>Free to stick. Pay once for more.</h2>
+    </div>
+    <div class="plans">
+      <div class="plan sticker" style="--r:-1.2deg">
+        <span class="plan-kicker">Free</span>
+        <h3>One great wallpaper</h3>
+        <ul class="perks">
+          <li>Every scene, the travel map too</li>
+          <li>One project, five stickers</li>
+          <li>Cutout, brush, outline and polaroid</li>
+          <li>No watermark, no time limit</li>
         </ul>
+        <p class="plan-foot">Download and start sticking.</p>
       </div>
-    </section>
-
-    <section id="faq">
-      <div class="section-head">
-        <h2>Pinned answers</h2>
-        <span class="count">06</span>
+      <div class="plan paywall sticker" style="--r:1.2deg">
+        <span class="launch">Launch price for the first weeks</span>
+        <span class="plan-kicker accent">Sticta Unlimited</span>
+        <h3>Keep every memory</h3>
+        <ul class="perks strong">
+          <li>Unlimited stickers</li>
+          <li>Unlimited projects</li>
+          <li>A different project on every display</li>
+          <li>Wallpaper rotation</li>
+        </ul>
+        <p class="plan-foot">One-time purchase · no subscription · Family Sharing</p>
       </div>
+    </div>
+  </section>
 
-      <div class="faq">
-        <details class="sticker">
-          <summary><span class="dot">+</span>My wallpaper didn't change after I edited a project.</summary>
-          <div class="answer"><p>Sticta never changes your wallpaper on its own. When you're happy with your edits, click the button that sets the project as your wallpaper. The same goes for connecting or disconnecting a display: the button shows the wallpaper is out of date and waits for you.</p></div>
-        </details>
-
-        <details class="sticker">
-          <summary><span class="dot">+</span>Can I use a different project on each display?</summary>
-          <div class="answer"><p>Yes. Open Displays in Sticta and assign a project to each connected screen. Sticta remembers the assignment.</p></div>
-        </details>
-
-        <details class="sticker">
-          <summary><span class="dot">+</span>Why wasn't my photo placed on the map automatically?</summary>
-          <div class="answer"><p>Automatic placement uses the location saved in the photo (GPS data). If a photo has no location data, or it has been removed, you can still drag its sticker onto the right country yourself.</p></div>
-        </details>
-
-        <details class="sticker">
-          <summary><span class="dot">+</span>Sticta is using a lot of disk space.</summary>
-          <div class="answer"><p>Each sticker keeps its original photo so you can edit it later. Open Settings → Storage to see how much space Sticta uses and to clean up files nothing uses anymore. You can also delete stickers you no longer need from the sticker bank.</p></div>
-        </details>
-
-        <details class="sticker">
-          <summary><span class="dot">+</span>Does Sticta upload my photos anywhere?</summary>
-          <div class="answer"><p>No. Sticta runs entirely on your Mac and never connects to the internet. Read the <a href="privacy.html">privacy policy</a> for the details.</p></div>
-        </details>
-
-        <details class="sticker">
-          <summary><span class="dot">+</span>How do I hide the menu bar icon?</summary>
-          <div class="answer"><p>Open Settings → General and turn off the menu bar icon. You can turn it back on at any time.</p></div>
-        </details>
-      </div>
-    </section>
-  </div>
+  <!-- ============ NOTIFY ============ -->
+  <section id="notify" class="wrap">
+    <div class="notify-card sticker" style="--r:-1deg">
+      <span class="pin"></span>
+      <img class="nc-st a" src="assets/home/crew.webp" alt="" loading="lazy">
+      <img class="nc-st b" src="assets/home/lena.webp" alt="" loading="lazy">
+      <h2>Be first on the wall.</h2>
+      <p>Sticta is almost ready. Leave your email and we'll tell you the day it lands on the Mac App Store, while the launch price lasts.</p>
+      <form class="notify center" data-notify novalidate>
+        <label class="sr-only" for="email-bottom">Email address</label>
+        <input id="email-bottom" type="email" name="field_0" placeholder="you@example.com" autocomplete="email" required>
+        <button class="btn" type="submit">Notify me</button>
+        <input class="hp" type="text" name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="notify-note">One email on launch day, then we delete the list. See the <a href="privacy#website">privacy policy</a>.</p>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="wrap foot">
     <span class="display">Sticta</span>
-    <span>© 2026 Mateusz Czechowski · <a href="mailto:sticta@proton.me">sticta@proton.me</a> · <a href="privacy.html">Privacy</a></span>
+    <span>© 2026 Mateusz Czechowski · <a href="support">Support</a> · <a href="privacy">Privacy</a> · <a href="mailto:sticta@proton.me">sticta@proton.me</a></span>
+    <span class="credits">Sample photos: Unsplash contributors via Wikimedia Commons (CC0). Map data: Natural Earth.</span>
   </div>
 </footer>
 
+<script src="home.js" defer></script>
 </body>
 </html>
