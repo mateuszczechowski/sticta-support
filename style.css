@@ -304,6 +304,8 @@ footer { padding: 48px 0 40px; }
   border-top: 1px solid var(--line); padding-top: 20px; color: var(--mute); font-size: 14px;
 }
 .foot .display { font-size: 18px; color: var(--ink); }
+.foot .fine { font-size: 12px; color: var(--mute); text-decoration: none; }
+.foot .fine:hover { color: var(--accent); text-decoration: underline; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {

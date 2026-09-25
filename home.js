@@ -7,6 +7,24 @@
 // Turn reCAPTCHA off in the form's settings, or submissions get rejected.
 const EO_FORM_ID = "7f7123e2-b8bc-11f1-b7b9-c5447589fe5b";
 
+// Where a sign-up came from, without analytics: links we post carry
+// ?ref=<source> (e.g. sticta.app/?ref=reddit), and the tag goes along with
+// the address into EmailOctopus's "Source" field. Its form name is the
+// field's position in the EmailOctopus form (field_0 is the email).
+// Empty = don't send it.
+const EO_SOURCE_FIELD = "";
+const REF_KEY = "sticta-ref";
+const ref = (() => {
+  const clean = (v) => (v || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 32);
+  const fromUrl = clean(new URLSearchParams(location.search).get("ref"));
+  try {
+    if (fromUrl) sessionStorage.setItem(REF_KEY, fromUrl);
+    return fromUrl || sessionStorage.getItem(REF_KEY) || "";
+  } catch {
+    return fromUrl;
+  }
+})();
+
 /* ---------- hero: live map with draggable stickers ---------- */
 (async function heroMap() {
   const screen = document.querySelector(".mac-screen");
@@ -173,6 +191,12 @@ for (const scene of document.querySelectorAll("[data-variants]")) {
 })();
 
 /* ---------- notify forms ---------- */
+function formData(form) {
+  const data = new FormData(form);
+  if (EO_SOURCE_FIELD) data.set(EO_SOURCE_FIELD, ref || "direct");
+  return data;
+}
+
 for (const form of document.querySelectorAll("[data-notify]")) {
   const note = form.querySelector(".notify-note");
   const noteHTML = note.innerHTML;
@@ -196,7 +220,7 @@ for (const form of document.querySelectorAll("[data-notify]")) {
     let result;
     try {
       const res = await fetch(`https://eocampaign1.com/form/${EO_FORM_ID}`, {
-        method: "POST", mode: "cors", cache: "no-cache", body: new FormData(form),
+        method: "POST", mode: "cors", cache: "no-cache", body: formData(form),
       });
       result = await res.json();
     } catch {
