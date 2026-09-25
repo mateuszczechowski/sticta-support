@@ -22,6 +22,10 @@
     <a class="pill" href="support" aria-current="page">Support</a>
     <a class="pill hide-sm" href="privacy">Privacy</a>
     <a class="pill cta" href="./#notify">Get notified</a>
+    <details class="navmenu">
+      <summary aria-label="Menu"><span></span></summary>
+      <div class="navmenu-panel" onclick="if (event.target.closest('a')) this.parentNode.open = false"><a href="./#features">Features</a><a href="./#pricing">Pricing</a><a href="support" aria-current="page">Support</a><a href="privacy">Privacy</a></div>
+    </details>
   </nav>
 </header>
 

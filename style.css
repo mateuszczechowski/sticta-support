@@ -97,7 +97,33 @@ h1, h2, h3, .display { font-family: var(--display); font-weight: 400; letter-spa
 .pill[aria-current="page"] { background: var(--accent); color: var(--accent-ink); }
 .pill.cta { background: var(--ink); color: var(--surface); white-space: nowrap; }
 .pill.cta:hover { background: var(--accent); color: var(--accent-ink); }
-@media (max-width: 700px) { .hide-sm { display: none; } }
+.navmenu { display: none; position: relative; }
+@media (max-width: 700px) {
+  .topbar-inner > .pill:not(.cta) { display: none; }
+  .navmenu { display: block; }
+}
+.navmenu summary {
+  list-style: none; cursor: pointer; width: 38px; height: 38px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--chip);
+}
+.navmenu summary::-webkit-details-marker { display: none; }
+.navmenu summary span, .navmenu summary span::before, .navmenu summary span::after {
+  display: block; width: 16px; height: 2px; border-radius: 2px; background: var(--ink); position: relative; transition: transform .2s, background .2s;
+}
+.navmenu summary span::before, .navmenu summary span::after { content: ""; position: absolute; left: 0; }
+.navmenu summary span::before { top: -5px; } .navmenu summary span::after { top: 5px; }
+.navmenu[open] summary span { background: transparent; }
+.navmenu[open] summary span::before { transform: translateY(5px) rotate(45deg); }
+.navmenu[open] summary span::after { transform: translateY(-5px) rotate(-45deg); }
+.navmenu summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.navmenu-panel {
+  position: absolute; right: -6px; top: calc(100% + 12px); min-width: 190px;
+  display: grid; gap: 2px; padding: 8px; border-radius: 18px;
+  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-lift);
+}
+.navmenu-panel a { padding: 10px 14px; border-radius: 12px; font-weight: 600; color: var(--ink); text-decoration: none; }
+.navmenu-panel a:hover { background: var(--chip); }
+.navmenu-panel a[aria-current="page"] { background: var(--accent); color: var(--accent-ink); }
 
 /* ---------- hero ---------- */
 .hero { position: relative; padding: 72px 0 56px; }

@@ -379,6 +379,41 @@
 
 .credits { flex-basis: 100%; font-size: 12px; }
 
+/* ---------- stickers scattered in the side margins (wide screens only) ---------- */
+.home main > section { position: relative; }
+.decos { display: none; }
+@media (min-width: 1380px) {
+  .decos { display: block; position: absolute; inset: 0; pointer-events: none; }
+  .deco {
+    position: absolute; top: var(--t); margin: 0; pointer-events: auto;
+    transform: rotate(var(--r)); transition: transform .3s cubic-bezier(.3, 1.4, .5, 1), filter .3s;
+  }
+  .deco.l { right: calc(100% + clamp(24px, 4vw, 90px)); }
+  .deco.r { left: calc(100% + clamp(24px, 4vw, 90px)); }
+  .deco:hover { transform: rotate(0deg) scale(1.08); }
+  .deco img { display: block; width: 100%; }
+  .deco.cut { width: var(--w); filter: drop-shadow(0 8px 10px rgba(31, 42, 58, .28)); }
+  .deco .tack {
+    position: absolute; left: 50%; top: 0; width: 18px; height: 18px; transform: translate(-50%, -30%); border-radius: 50%; z-index: 1;
+    background: radial-gradient(circle at 35% 30%, #F08A76 0 18%, #C8412E 45%, #8C2A1C 100%); box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
+  }
+  .deco.chip {
+    padding: 8px 16px; border-radius: 999px; border: 4px solid var(--outline); white-space: nowrap;
+    font-weight: 800; font-size: 15px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow);
+  }
+  .deco.chip.sun { background: var(--visited); color: var(--tray-ink); }
+  .deco.chip.red { background: var(--accent); color: var(--accent-ink); }
+  .deco.chip.tray { background: var(--tray); color: var(--tray-ink); }
+  .deco.pola { width: var(--w); padding: 9px 9px 34px; background: #FFFCF6; box-shadow: var(--shadow-lift); }
+  .deco.pola .tape { top: -12px; left: 50%; width: 70px; margin-left: -35px; }
+  .deco.icon { width: var(--w); border-radius: 28px; overflow: hidden; border: 6px solid var(--outline); box-shadow: var(--shadow-lift); background: var(--navy); }
+}
+@media (min-width: 1380px) and (prefers-reduced-motion: no-preference) {
+  .deco { animation: bob 7s ease-in-out infinite; }
+  .deco:nth-child(2) { animation-delay: -3.5s; }
+  @keyframes bob { 50% { translate: 0 -7px; } }
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .split { grid-template-columns: 1fr; gap: 32px; }
