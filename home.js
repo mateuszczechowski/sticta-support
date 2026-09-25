@@ -212,6 +212,6 @@ for (const form of document.querySelectorAll("[data-notify]")) {
     thanks.className = "thanks";
     thanks.textContent = "Almost there!";
     form.insertBefore(thanks, note);
-    note.textContent = "Check your inbox and confirm your address. That's the only email until launch day.";
+    note.textContent = "Check your inbox and confirm your address to join the list.";
   });
 }
