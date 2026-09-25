@@ -137,6 +137,33 @@ const ref = (() => {
   });
 })();
 
+/* ---------- promo video: plays (muted) only while on screen ---------- */
+(function promo() {
+  const video = document.querySelector("[data-promo]");
+  if (!video || !("IntersectionObserver" in window)) return;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return; // controls only
+  // A pause counts as the viewer's only right after they touched the player;
+  // the browser also pauses on its own (hidden tab, power saving).
+  let touchedAt = 0, pausedByViewer = false, onScreen = false, pausingOurselves = false;
+  for (const type of ["pointerdown", "keydown"]) video.addEventListener(type, () => { touchedAt = Date.now(); });
+  video.addEventListener("pause", () => {
+    if (!pausingOurselves && Date.now() - touchedAt < 1000) pausedByViewer = true;
+    pausingOurselves = false;
+  });
+  video.addEventListener("play", () => { pausedByViewer = false; });
+  const sync = () => {
+    if (onScreen && !pausedByViewer && document.visibilityState === "visible") {
+      video.preload = "auto";
+      video.play().catch(() => {});
+    } else if (!onScreen && !video.paused) {
+      pausingOurselves = true;
+      video.pause();
+    }
+  };
+  new IntersectionObserver(([entry]) => { onScreen = entry.isIntersecting; sync(); }, { threshold: 0.4 }).observe(video);
+  document.addEventListener("visibilitychange", sync);
+})();
+
 /* ---------- before / after ---------- */
 for (const box of document.querySelectorAll("[data-compare]")) {
   const input = box.querySelector("input");
