@@ -44,11 +44,10 @@
 .notify.done input, .notify.done button { display: none; }
 /* die-cut sticker lettering: red letters, a white ring around each glyph, one soft shadow under the lot */
 .code-tag {
-  display: inline-block; margin: 0 3px; padding: 0 2px;
+  display: inline-block; margin: 0 2px; padding: 0 2px;
   color: var(--accent); font-size: 1.1em; font-weight: 800; letter-spacing: .01em; white-space: nowrap;
   text-shadow: 3.20px 0.00px 0 var(--outline), 2.96px 1.22px 0 var(--outline), 2.26px 2.26px 0 var(--outline), 1.22px 2.96px 0 var(--outline), 0.00px 3.20px 0 var(--outline), -1.22px 2.96px 0 var(--outline), -2.26px 2.26px 0 var(--outline), -2.96px 1.22px 0 var(--outline), -3.20px 0.00px 0 var(--outline), -2.96px -1.22px 0 var(--outline), -2.26px -2.26px 0 var(--outline), -1.22px -2.96px 0 var(--outline), -0.00px -3.20px 0 var(--outline), 1.22px -2.96px 0 var(--outline), 2.26px -2.26px 0 var(--outline), 2.96px -1.22px 0 var(--outline);
   filter: drop-shadow(0 2px 2px rgba(31, 42, 58, .22)) drop-shadow(0 5px 8px rgba(31, 42, 58, .14));
-  transform: rotate(-2deg);
 }
 @media (max-width: 480px) { .code-tag { white-space: normal; } }
 .notify-note.error { color: var(--accent); font-weight: 700; }
