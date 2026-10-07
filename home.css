@@ -439,3 +439,9 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* hero download button */
+.get { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.get .btn { font-size: 17px; padding: 15px 26px; }
+.get .apple { width: 17px; height: 20px; margin-top: -3px; }
+.get .notify-note { flex-basis: auto; text-align: center; }
