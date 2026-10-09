@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sticta — your photos, stuck to your desktop</title>
+  <title>Sticta — Photo Wallpaper Maker for Mac</title>
   <meta name="description" content="Sticta cuts people out of your photos, turns them into stickers and pins them to a travel map, a fridge door or a corkboard — then sets it all as your Mac's wallpaper.">
   <link rel="canonical" href="https://sticta.app/">
   <meta property="og:type" content="website">
@@ -22,15 +22,16 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="preload" href="assets/YoungSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="style.css?v=5237e35e">
+  <link rel="stylesheet" href="style.css?v=617609b8">
   <link rel="stylesheet" href="home.css?v=a2faaebe">
-  <script type="application/ld+json">
-  [{
+  <script type="application/ld+json">[
+  {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Sticta",
     "url": "https://sticta.app/"
-  }, {
+  },
+  {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Sticta",
@@ -41,10 +42,92 @@
     "operatingSystem": "macOS",
     "downloadUrl": "https://apps.apple.com/app/id6815226547",
     "installUrl": "https://apps.apple.com/app/id6815226547",
-    "sameAs": ["https://apps.apple.com/app/id6815226547"],
-    "author": {"@type": "Person", "name": "Mateusz Czechowski", "url": "https://mateuszczechowski.github.io/"},
-    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://apps.apple.com/app/id6815226547"}
-  }]
+    "sameAs": [
+      "https://apps.apple.com/app/id6815226547"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Mateusz Czechowski",
+      "url": "https://mateuszczechowski.github.io/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://apps.apple.com/app/id6815226547"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I make a wallpaper from my own photos on a Mac?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Drag your photos into Sticta. It cuts out the people, turns them into stickers and lays them on a scene: a travel map, a fridge door, a corkboard or a background of your own. Arrange them, then click Set as Wallpaper and it becomes your desktop, rendered sharp for every display."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I cut a person out of a photo on a Mac?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For a single cutout, Control-click the person in Photos and choose Copy Subject, or use Tools → Remove Background in Preview. Sticta does the same on your Mac, lets you pick who stays in a group photo and fix the edges with a brush, then turns the cutout into a sticker."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I put my travel photos on a map?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. On Sticta's travel map, each sticker is pinned to the country where its photo was taken, using the location saved in the photo, and the countries you've visited light up. Show the whole world, a continent or one country."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Sticta free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sticta is free to download, with every scene, one project and five stickers, no watermark and no time limit. Sticta Unlimited is a one-time purchase that removes the limits and adds a project per display and wallpaper rotation. No subscription, and Family Sharing is on."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Macs does Sticta run on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Macs with Apple silicon (M1 or later) running macOS 14 Sonoma or later. It is available on the Mac App Store."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Sticta upload my photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Sticta never connects to the internet: the cutout, the map and the wallpaper are all made on your Mac. No account, no analytics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export a wallpaper as an image or print it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Coming soon. The next update adds Export: save any project as a PNG for a 4K or 1080p TV or in print sizes from 10 × 15 cm to A3 at 300 DPI, or add it to a Photos album you can use as your Apple TV screen saver."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can each display show a different wallpaper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with Sticta Unlimited. Give every display its own project at its full resolution, and Sticta remembers which is which. Add a few projects to one screen and it rotates them hourly, daily, weekly or each time your Mac wakes."
+        }
+      }
+    ]
+  }
+]
   </script>
 </head>
 <body class="home">
@@ -228,6 +311,7 @@
           <div><strong>Zoom</strong><span>Show the whole world, a continent or one country.</span></div>
           <div><strong>Big faces</strong><span>Stickers are sized so you can still tell who's who.</span></div>
         </div>
+        <p style="margin:16px 0 0"><a href="travel-map-wallpaper">How to make a travel map wallpaper →</a></p>
       </div>
     </div>
   </section>
@@ -353,6 +437,49 @@
         <p class="plan-foot">One-time purchase · no subscription · Family Sharing</p>
       </div>
     </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Questions</span>
+      <h2>Good to know.</h2>
+    </div>
+    <div class="faq">
+        <details class="sticker">
+          <summary><span class="dot">+</span>How do I make a wallpaper from my own photos on a Mac?</summary>
+          <div class="answer"><p>Drag your photos into Sticta. It cuts out the people, turns them into stickers and lays them on a scene: a travel map, a fridge door, a corkboard or a background of your own. Arrange them, then click Set as Wallpaper and it becomes your desktop, rendered sharp for every display.</p></div>
+        </details>
+        <details class="sticker">
+          <summary><span class="dot">+</span>How do I cut a person out of a photo on a Mac?</summary>
+          <div class="answer"><p>For a single cutout, Control-click the person in Photos and choose Copy Subject, or use Tools → Remove Background in Preview. Sticta does the same on your Mac, lets you pick who stays in a group photo and fix the edges with a brush, then turns the cutout into a sticker. <a href="cut-out-photo-mac">Three ways, compared →</a></p></div>
+        </details>
+        <details class="sticker">
+          <summary><span class="dot">+</span>Can I put my travel photos on a map?</summary>
+          <div class="answer"><p>Yes. On Sticta's travel map, each sticker is pinned to the country where its photo was taken, using the location saved in the photo, and the countries you've visited light up. Show the whole world, a continent or one country. <a href="travel-map-wallpaper">Step by step →</a></p></div>
+        </details>
+        <details class="sticker">
+          <summary><span class="dot">+</span>Is Sticta free?</summary>
+          <div class="answer"><p>Sticta is free to download, with every scene, one project and five stickers, no watermark and no time limit. Sticta Unlimited is a one-time purchase that removes the limits and adds a project per display and wallpaper rotation. No subscription, and Family Sharing is on.</p></div>
+        </details>
+        <details class="sticker">
+          <summary><span class="dot">+</span>Which Macs does Sticta run on?</summary>
+          <div class="answer"><p>Macs with Apple silicon (M1 or later) running macOS 14 Sonoma or later. It is available on the Mac App Store.</p></div>
+        </details>
+        <details class="sticker">
+          <summary><span class="dot">+</span>Does Sticta upload my photos?</summary>
+          <div class="answer"><p>No. Sticta never connects to the internet: the cutout, the map and the wallpaper are all made on your Mac. No account, no analytics. <a href="privacy">Privacy policy →</a></p></div>
+        </details>
+        <details class="sticker">
+          <summary><span class="dot">+</span>Can I export a wallpaper as an image or print it?</summary>
+          <div class="answer"><p>Coming soon. The next update adds Export: save any project as a PNG for a 4K or 1080p TV or in print sizes from 10 × 15 cm to A3 at 300 DPI, or add it to a Photos album you can use as your Apple TV screen saver.</p></div>
+        </details>
+        <details class="sticker">
+          <summary><span class="dot">+</span>Can each display show a different wallpaper?</summary>
+          <div class="answer"><p>Yes, with Sticta Unlimited. Give every display its own project at its full resolution, and Sticta remembers which is which. Add a few projects to one screen and it rotates them hourly, daily, weekly or each time your Mac wakes.</p></div>
+        </details>
+    </div>
+    <p class="scenes-more"><span>More answers on the <a href="support">support page</a>.</span></p>
   </section>
 
   <!-- ============ NOTIFY ============ -->

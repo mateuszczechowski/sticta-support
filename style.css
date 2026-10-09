@@ -329,9 +329,9 @@ footer { padding: 48px 0 40px; }
 
 /* ---------- press kit ---------- */
 .press-note { color: var(--mute); font-size: 14px; margin: 12px 0 8px; }
-.facts { display: grid; grid-template-columns: 110px 1fr; gap: 8px 16px; margin: 0; }
-.facts dt { font-weight: 700; }
-.facts dd { margin: 0; }
+dl.facts { display: grid; grid-template-columns: 110px 1fr; gap: 8px 16px; margin: 0; }
+dl.facts dt { font-weight: 700; }
+dl.facts dd { margin: 0; }
 .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; }
 .shots a { display: block; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); transition: transform .15s; }
 .shots a:hover { transform: translateY(-2px); }
@@ -339,8 +339,14 @@ footer { padding: 48px 0 40px; }
 .press-video { display: block; width: 100%; border-radius: 8px; box-shadow: var(--shadow); margin: 4px 0 12px; }
 .press-icon { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .press-icon img { width: 128px; height: 128px; }
+
+/* ---------- guides ---------- */
+.guide-shot { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow); margin: 12px 0 4px; }
+.guide .clause ol, .guide .clause ul { margin: 0 0 10px; padding-left: 22px; }
+.guide .clause li { margin-bottom: 6px; }
+.guide .actions { margin-top: 28px; padding-top: 28px; border-top: 1px dashed var(--line); }
 @media (max-width: 640px) {
   .shots { grid-template-columns: 1fr; }
-  .facts { grid-template-columns: 1fr; gap: 2px; }
-  .facts dd { margin-bottom: 8px; }
+  dl.facts { grid-template-columns: 1fr; gap: 2px; }
+  dl.facts dd { margin-bottom: 8px; }
 }
