@@ -126,10 +126,31 @@
       </div>
     </section>
 
+    <section id="apple-tv">
+      <div class="section-head">
+        <h2>Wallpapers on Apple TV</h2>
+      </div>
+      <div class="sticker polaroid">
+        <span class="pin"></span>
+        <span class="eyebrow">Sticta 1.1</span>
+        <h3>Apple TV can't use a wallpaper directly.</h3>
+        <p style="color:var(--mute);margin:0 0 10px">Apple doesn't let apps set the Apple TV's background, or add their own screen saver. What it does allow is a screen saver that shows an album from iCloud Photos, so Sticta puts your wallpapers in a "Sticta" album there.</p>
+        <ol style="color:var(--mute);margin:0 0 10px;padding-left:22px">
+          <li>On your Mac, choose File → Export Wallpaper… (⌘E).</li>
+          <li>Tick your projects and the <strong>4K TV</strong> or <strong>1080p TV</strong> size.</li>
+          <li>Tick <strong>Add to Photos</strong> and allow Sticta to use your photo library when macOS asks.</li>
+          <li>On your Apple TV, open Settings → General → Screen Saver → Memories &amp; Slideshows, and choose the "Sticta" album.</li>
+        </ol>
+        <p style="color:var(--mute);margin:0 0 10px">iCloud Photos must be turned on, on both your Mac and your Apple TV, with the same Apple ID. The photos can take a few minutes to arrive.</p>
+        <p style="color:var(--mute);margin:0 0 10px"><strong>Changed a project?</strong> Export it again. Each export adds a new photo to the album; tick <strong>Replace earlier versions</strong> to have Sticta remove the older ones (macOS asks once to confirm). Nothing else in your library is touched, and deleting a project in Sticta never removes photos from Photos.</p>
+        <p style="color:var(--mute);margin:0"><strong>Photos access turned off?</strong> Sticta shows a card in the export window with a button that opens System Settings → Privacy &amp; Security → Photos; allow Sticta there and come back. Prefer not to give access? Tick <strong>Save as files</strong> instead, then drag the exported PNGs into an album in the Photos app and use that album for the screen saver.</p>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="section-head">
         <h2>Pinned answers</h2>
-        <span class="count">06</span>
+        <span class="count">08</span>
       </div>
 
       <div class="faq">
@@ -161,6 +182,16 @@
         <details class="sticker">
           <summary><span class="dot">+</span>How do I hide the menu bar icon?</summary>
           <div class="answer"><p>Open Settings → General and turn off the menu bar icon. You can turn it back on at any time.</p></div>
+        </details>
+
+        <details class="sticker">
+          <summary><span class="dot">+</span>Can I print a wallpaper?</summary>
+          <div class="answer"><p>Yes. In Export Wallpaper… (⌘E), the Print sizes (10 × 15 cm, 13 × 18 cm, 20 × 25 cm, A4 and A3, or 4 × 6, 5 × 7 and 8 × 10 inches) save landscape PNG files at 300 DPI, so Preview and your printer know the paper size. They are saved as files only, not to Photos. If a project's photos are small for the paper, Sticta adds a "May print soft" note under it; you can still export.</p></div>
+        </details>
+
+        <details class="sticker">
+          <summary><span class="dot">+</span>Can I use my Sticta wallpaper on Apple TV?</summary>
+          <div class="answer"><p>Yes, through Photos: export it with Add to Photos, then pick the "Sticta" album as your Apple TV screen saver. <a href="#apple-tv">Step by step</a>.</p></div>
         </details>
       </div>
     </section>
