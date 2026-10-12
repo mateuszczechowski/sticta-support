@@ -26,6 +26,46 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Article", "headline": "How to make a travel map wallpaper from your photos", "description": "Make a travel map wallpaper for your Mac: photos of the people you travelled with, pinned to the countries where you took them, with visited countries lit up.", "image": "https://sticta.app/assets/og.jpg", "datePublished": "2026-10-09", "author": {"@type": "Person", "name": "Mateusz Czechowski", "url": "https://mateuszczechowski.github.io/"}, "mainEntityOfPage": "https://sticta.app/travel-map-wallpaper"}
   </script>
+<!-- Page Pulse (privacy-friendly: no cookies, no localStorage/sessionStorage, no persistent visitor ID) -->
+<script>
+(function(){
+  if(window.self!==window.top)return;
+  var pid="4a3903d2-e4a1-46b0-a912-f2eba5350eb7";
+  var tk="bcec4612-bca1-4c6a-8962-24d3207e521b";
+  var ep="https://esnubozrjxrbegatzusu.supabase.co/functions/v1/track";
+  var sid=Math.random().toString(36).slice(2);
+  function send(t,n){
+    fetch(ep,{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({page_id:pid,token:tk,url:location.href,referrer:document.referrer,
+        user_agent:navigator.userAgent,screen_width:screen.width,
+        session_id:sid,visitor_id:sid,event_type:t,element_name:n||null}),keepalive:true});
+  }
+  send("pageview");
+  document.addEventListener("click",function(e){
+    var el=e.target.closest("a,button,[role='button'],input[type='submit']");
+    if(!el)return;
+    var name=el.getAttribute("data-pp")||el.innerText||el.getAttribute("aria-label")||el.tagName;
+    if(name)send("click",name.trim().substring(0,100));
+  });
+  setInterval(function(){if(!document.hidden)send("ping");},15000);
+  var _v={cls:0,inp:0};
+  try{
+    if(window.PerformanceObserver){
+      try{new PerformanceObserver(function(l){var e=l.getEntries();if(e.length)_v.lcp=Math.round(e[e.length-1].startTime);}).observe({type:"largest-contentful-paint",buffered:true});}catch(e){}
+      try{new PerformanceObserver(function(l){l.getEntries().forEach(function(e){if(!e.hadRecentInput)_v.cls+=e.value;});}).observe({type:"layout-shift",buffered:true});}catch(e){}
+      try{new PerformanceObserver(function(l){l.getEntries().forEach(function(e){if(e.duration>_v.inp)_v.inp=Math.round(e.duration);});}).observe({type:"event",buffered:true,durationThreshold:40});}catch(e){}
+    }
+  }catch(e){}
+  function flushVitals(){
+    if(_v._sent)return;_v._sent=1;
+    try{var nt=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];if(nt&&nt.loadEventEnd)_v.load=Math.round(nt.loadEventEnd);}catch(e){}
+    var payload={page_id:pid,token:tk,url:location.href,session_id:sid,event_type:"vitals",vitals:{lcp:_v.lcp||null,cls:_v.cls?Math.round(_v.cls*1000)/1000:null,inp:_v.inp||null,load_time:_v.load||null,device_type:(screen.width&&screen.width<768)?"mobile":"desktop"}};
+    try{navigator.sendBeacon(ep,new Blob([JSON.stringify(payload)],{type:"application/json"}));}catch(e){}
+  }
+  addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")flushVitals();});
+  addEventListener("pagehide",flushVitals);
+})();
+</script>
 </head>
 <body>
 

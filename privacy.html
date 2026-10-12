@@ -23,6 +23,46 @@
   <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="preload" href="assets/YoungSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="style.css?v=617609b8">
+<!-- Page Pulse (privacy-friendly: no cookies, no localStorage/sessionStorage, no persistent visitor ID) -->
+<script>
+(function(){
+  if(window.self!==window.top)return;
+  var pid="4a3903d2-e4a1-46b0-a912-f2eba5350eb7";
+  var tk="bcec4612-bca1-4c6a-8962-24d3207e521b";
+  var ep="https://esnubozrjxrbegatzusu.supabase.co/functions/v1/track";
+  var sid=Math.random().toString(36).slice(2);
+  function send(t,n){
+    fetch(ep,{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({page_id:pid,token:tk,url:location.href,referrer:document.referrer,
+        user_agent:navigator.userAgent,screen_width:screen.width,
+        session_id:sid,visitor_id:sid,event_type:t,element_name:n||null}),keepalive:true});
+  }
+  send("pageview");
+  document.addEventListener("click",function(e){
+    var el=e.target.closest("a,button,[role='button'],input[type='submit']");
+    if(!el)return;
+    var name=el.getAttribute("data-pp")||el.innerText||el.getAttribute("aria-label")||el.tagName;
+    if(name)send("click",name.trim().substring(0,100));
+  });
+  setInterval(function(){if(!document.hidden)send("ping");},15000);
+  var _v={cls:0,inp:0};
+  try{
+    if(window.PerformanceObserver){
+      try{new PerformanceObserver(function(l){var e=l.getEntries();if(e.length)_v.lcp=Math.round(e[e.length-1].startTime);}).observe({type:"largest-contentful-paint",buffered:true});}catch(e){}
+      try{new PerformanceObserver(function(l){l.getEntries().forEach(function(e){if(!e.hadRecentInput)_v.cls+=e.value;});}).observe({type:"layout-shift",buffered:true});}catch(e){}
+      try{new PerformanceObserver(function(l){l.getEntries().forEach(function(e){if(e.duration>_v.inp)_v.inp=Math.round(e.duration);});}).observe({type:"event",buffered:true,durationThreshold:40});}catch(e){}
+    }
+  }catch(e){}
+  function flushVitals(){
+    if(_v._sent)return;_v._sent=1;
+    try{var nt=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];if(nt&&nt.loadEventEnd)_v.load=Math.round(nt.loadEventEnd);}catch(e){}
+    var payload={page_id:pid,token:tk,url:location.href,session_id:sid,event_type:"vitals",vitals:{lcp:_v.lcp||null,cls:_v.cls?Math.round(_v.cls*1000)/1000:null,inp:_v.inp||null,load_time:_v.load||null,device_type:(screen.width&&screen.width<768)?"mobile":"desktop"}};
+    try{navigator.sendBeacon(ep,new Blob([JSON.stringify(payload)],{type:"application/json"}));}catch(e){}
+  }
+  addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")flushVitals();});
+  addEventListener("pagehide",flushVitals);
+})();
+</script>
 </head>
 <body>
 
@@ -52,7 +92,7 @@
         <div class="sticker promise"><div class="big">0</div><div class="label">bytes collected</div><div class="sub">No personal data, usage data or diagnostics.</div></div>
         <div class="sticker promise"><div class="big">0</div><div class="label">network requests</div><div class="sub">Sticta works fully offline. Purchases go through Apple.</div></div>
         <div class="sticker promise"><div class="big">0</div><div class="label">accounts</div><div class="sub">Nothing to sign up for or sign in to.</div></div>
-        <div class="sticker promise"><div class="big">0</div><div class="label">trackers</div><div class="sub">No ads, no analytics, no third-party SDKs.</div></div>
+        <div class="sticker promise"><div class="big">0</div><div class="label">trackers</div><div class="sub">No ads, no analytics and no third-party SDKs in the app.</div></div>
       </div>
     </section>
 
@@ -99,7 +139,7 @@
 
       <div class="clause"><span class="n">07</span><div id="website">
         <h3>This website, our email list and the beta</h3>
-        <p>This website (sticta.app) uses no cookies, analytics or trackers. It is hosted on GitHub Pages, and GitHub may keep standard server logs, such as IP addresses, for security. We don't see those logs.</p>
+        <p>This website (sticta.app) sets no cookies and stores nothing on your device. To see which pages are visited, it uses a simple analytics service, Page Pulse, which runs on Supabase servers. When you open a page it receives the page address, the page you came from, your browser type and screen width, your IP address (as part of any web request), which links and buttons you click, how long the page stays open and how fast it loads. It has no persistent visitor ID and no link to your identity, so we can't recognise you from one visit to the next. We use it only to improve the site. The Sticta app itself still has no analytics. The site is hosted on GitHub Pages, and GitHub may keep standard server logs, such as IP addresses, for security. We don't see those logs.</p>
         <p>If you join Sticta's email list, your address is stored by our email provider, <a href="https://emailoctopus.com/legal/privacy">EmailOctopus</a> (Three Hearts Digital Ltd, United Kingdom), on servers in Ireland. EmailOctopus handles it only on our behalf. We use it only to email you about Sticta: first a confirmation email, and after that occasional news such as new scenes or offers. People who joined before launch also got news about the beta and the launch announcement with a discount code. If you came through one of our links that carries a source tag (such as <code>?ref=reddit</code>), we store that tag with your address, so we know which posts bring people in. We never sell or share your address. You can unsubscribe with the link in any of these emails, or write to us and we'll delete your address straight away. We keep it until you unsubscribe.</p>
         <p>If you test the Sticta beta through Apple's TestFlight, we receive only the feedback, screenshots and crash reports you choose to send, together with the details TestFlight attaches to them, such as your Mac model and macOS version. We use them only to improve Sticta and, if you give us your email address, to reply to you and to contact the winners of the <a href="giveaway">beta giveaway</a>. We delete them once the beta and the giveaway are over. Apple runs TestFlight under its own privacy policy.</p>
       </div></div>
