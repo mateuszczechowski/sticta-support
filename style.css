@@ -362,3 +362,4 @@ dl.facts dd { margin: 0; }
 .idea-line { color: var(--mute); font-size: 15px; }
 .idea-where { color: var(--mute); font-size: 13px; }
 @media (max-width: 700px) { .ideas-grid { grid-template-columns: 1fr; gap: 24px; } }
+.guide.wide .clause p, .guide.wide .clause ol, .guide.wide .clause ul { max-width: 72ch; }
