@@ -47,3 +47,7 @@ timeline-wallcalendar.webp, timeline-clothesline.webp, timeline-filmstrip.webp a
 - [Time together on the couch (Unsplash).jpg](https://commons.wikimedia.org/wiki/File:Time_together_on_the_couch_(Unsplash).jpg)
 - [Touring The Town (Unsplash).jpg](https://commons.wikimedia.org/wiki/File:Touring_The_Town_(Unsplash).jpg)
 - [Tree lights and woman smiling (Unsplash).jpg](https://commons.wikimedia.org/wiki/File:Tree_lights_and_woman_smiling_(Unsplash).jpg)
+
+## Ideas pages
+
+The wallpapers in `assets/ideas/` are real Sticta renders (`tack-cli ideas-marketing`) of the CC0 demo photos credited above (the 15 stickers from the first list plus the same photos as Original photo and Polaroid styles). Map borders: Natural Earth. The countries on the map are demo places, not where the photos were taken.
