@@ -363,6 +363,10 @@ dl.facts dd { margin: 0; }
 .idea-where { color: var(--mute); font-size: 13px; }
 @media (max-width: 700px) { .ideas-grid { grid-template-columns: 1fr; gap: 24px; } }
 .guide.wide .clause p, .guide.wide .clause ol, .guide.wide .clause ul { max-width: 72ch; }
-.guide.wide > .meta, .guide.wide > h1, .guide.wide > .tldr { max-width: 1000px; margin-left: auto; margin-right: auto; }
-.guide.wide > .clause, .guide.wide > .actions, .guide.wide > .press-note { max-width: 1000px; margin-left: auto; margin-right: auto; }
-.guide.wide > .press-note { text-align: left; }
+
+.guide.wide { text-align: center; }
+.guide.wide .clause { grid-template-columns: 1fr; justify-items: center; }
+.guide.wide .clause .n { margin-bottom: 2px; }
+.guide.wide .clause p, .guide.wide .clause ol, .guide.wide .clause ul { margin-left: auto; margin-right: auto; }
+.guide.wide .clause ol, .guide.wide .clause ul { list-style-position: inside; padding-left: 0; }
+.guide.wide .actions { justify-content: center; }
