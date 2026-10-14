@@ -296,6 +296,8 @@
 /* ---------- scenes ---------- */
 .scenes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 30px; }
 .scene { margin: 0; padding: 10px 10px 14px; border-radius: 14px; }
+.scene.wide { grid-column: 1 / -1; justify-self: center; width: calc(50% - 15px); }
+.scenes-line { max-width: 640px; margin: 34px auto 0; text-align: center; color: var(--mute); font-size: 16px; }
 .shot { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 6px; background: var(--ocean); }
 .shot > img:not(.mini) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
 .mini { position: absolute; filter: drop-shadow(0 4px 5px rgba(0, 0, 0, .35)); }
@@ -430,6 +432,7 @@
 }
 @media (max-width: 700px) {
   .scenes, .plans { grid-template-columns: 1fr; }
+  .scene.wide { width: auto; justify-self: stretch; }
   .map-feature { padding: 20px; min-height: 0; align-items: flex-end; padding-top: 220px; }
   .hint span { display: none; }
   .cap.left .sep, .cap.left span:last-child { display: none; }
