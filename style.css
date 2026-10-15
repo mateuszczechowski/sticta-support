@@ -306,6 +306,9 @@ footer { padding: 48px 0 40px; }
 .foot .display { font-size: 18px; color: var(--ink); }
 .foot .fine { font-size: 12px; color: var(--mute); text-decoration: none; }
 .foot .fine:hover { color: var(--accent); text-decoration: underline; }
+.foot .nl-badge { display: inline-flex; opacity: .55; transition: opacity .15s; }
+.foot .nl-badge:hover { opacity: 1; }
+.foot .nl-badge img { width: 122px; height: 28px; display: block; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
