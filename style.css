@@ -375,3 +375,6 @@ dl.facts dd { margin: 0; }
 .idea-where { color: var(--mute); font-size: 13px; }
 @media (max-width: 700px) { .ideas-grid { grid-template-columns: 1fr; gap: 24px; } }
 .guide.wide .clause p, .guide.wide .clause ol, .guide.wide .clause ul { max-width: 72ch; }
+.foot .lb-badge { display: inline-flex; opacity: .55; transition: opacity .15s; }
+.foot .lb-badge:hover { opacity: 1; }
+.foot .lb-badge img { width: 86px; height: 27px; display: block; }
